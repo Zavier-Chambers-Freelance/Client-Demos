@@ -4,164 +4,218 @@
   <meta charset="UTF-8">
   <title>Leona Foundation | Crisis Moving & Community Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --teal: #0C6E6F;
-      --mint: #A5E5D3;
-      --sand: #E8DCC2;
-      --gray: #8A8A8A;
-      --bg: #F5F2EA;
-      --border: #DFD7C7;
+      --teal:#0C6E6F;
+      --teal-dark:#084849;
+      --sand:#E8DCC2;
+      --bg:#F5F2EA;
+      --border:#DFD7C7;
+      --gray:#8A8A8A;
+      --radius:14px;
     }
-    * { box-sizing:border-box; margin:0; padding:0; }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
-      font-family:"Inter",system-ui,sans-serif;
+      font-family:"Inter",sans-serif;
       background:var(--bg);
       color:#1E2A2B;
       line-height:1.6;
     }
-    a { color:inherit; text-decoration:none; }
-    .container { max-width:900px; margin:0 auto; padding:0 1.5rem; }
+
+    a { text-decoration:none; color:inherit; }
+
     header {
-      border-bottom:1px solid rgba(12,110,111,0.1);
+      text-align:center;
+      padding:1.6rem 1rem 1rem;
       background:#FBF8F2;
+      border-bottom:1px solid rgba(0,0,0,0.08);
     }
-    .header-row {
-      display:flex; align-items:center; justify-content:space-between;
-      padding:0.9rem 0; gap:1rem;
+
+    header img {
+      width:160px;
+      height:auto;
+      margin-bottom:1rem;
     }
-    .back-link { font-size:0.86rem; color:#3B4A4B; }
-    .back-link span { margin-right:0.25rem; }
-    nav a { font-size:0.85rem; margin-left:0.9rem; color:#4A5A5B; }
-    .btn {
-      border-radius:999px;
-      border:1px solid var(--teal);
-      padding:0.4rem 1.1rem;
-      font-size:0.83rem;
-      background:var(--teal);
-      color:#fff;
-      cursor:pointer;
+
+    nav {
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:1.4rem;
+      font-size:0.92rem;
     }
-    main { padding:2.2rem 0 2.6rem; }
-    h1 { font-size:1.9rem; margin-bottom:0.4rem; }
-    h2 { font-size:1.25rem; margin:1.5rem 0 0.5rem; }
-    p { font-size:0.94rem; color:#455456; }
+    nav a {
+      padding-bottom:0.15rem;
+      border-bottom:2px solid transparent;
+    }
+    nav a:hover { border-bottom-color:var(--teal); }
+
+    .container {
+      max-width:1000px;
+      margin:0 auto;
+      padding:0 1.4rem;
+    }
+
+    main { padding:2.1rem 0 2.4rem; }
+
+    h1 {
+      font-size:2rem;
+      margin-bottom:0.6rem;
+      color:var(--teal-dark);
+      text-align:center;
+    }
+
+    p { font-size:1rem; color:#4A5A5B; }
+
     .tag {
       display:inline-block;
-      font-size:0.75rem;
-      padding:0.18rem 0.6rem;
-      border-radius:999px;
+      font-size:0.78rem;
       background:var(--sand);
-      color:#5C4B31;
+      padding:0.25rem 0.8rem;
+      border-radius:999px;
       margin-bottom:0.9rem;
+      color:#5C4B31;
     }
-    ul { padding-left:1.1rem; margin-top:0.3rem; color:#455456; font-size:0.92rem; }
-    li { margin-bottom:0.3rem; }
-    .highlight-box {
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:#FFFFFF;
-      padding:1rem 1.1rem;
-      margin-top:1.4rem;
-      font-size:0.9rem;
-    }
-    .muted {
-      font-size:0.83rem;
-      color:var(--gray);
-    }
+
     .stack {
       display:grid;
-      grid-template-columns:minmax(0,1.7fr) minmax(0,1.1fr);
-      gap:1.7rem;
+      grid-template-columns:1.6fr 1fr;
+      gap:1.6rem;
+      margin-top:1.4rem;
+    }
+    @media(max-width:840px){
+      .stack { grid-template-columns:1fr; }
+    }
+
+    h2 {
+      font-size:1.3rem;
       margin-top:1.2rem;
+      margin-bottom:0.5rem;
+      color:var(--teal-dark);
     }
-    @media (max-width:800px) {
-      .stack { grid-template-columns:minmax(0,1fr); }
+
+    ul {
+      margin-top:0.4rem;
+      padding-left:1.2rem;
+      font-size:0.96rem;
+      color:#4A5A5B;
+    }
+    li { margin-bottom:0.35rem; }
+
+    .highlight-box {
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      padding:1.1rem;
+      font-size:0.92rem;
     }
 
-    .big-logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;   /* CENTER the logo */
-  margin: 1.5rem 0 2rem;     /* spacing above & below */
-}
+    .highlight-box h3 {
+      margin-top:0;
+      margin-bottom:0.4rem;
+      color:var(--teal-dark);
+      font-size:1.05rem;
+    }
 
-.big-logo {
-  width: 260px;              /* adjust size here */
-  height: auto;
-  object-fit: contain;
-}
-
+    footer {
+      text-align:center;
+      margin-top:2.6rem;
+      padding:1.4rem 0;
+      font-size:0.82rem;
+      color:#4A5A5B;
+      border-top:1px solid rgba(0,0,0,0.1);
+    }
   </style>
 </head>
+
 <body>
+
 <header>
-  <div class="container header-row">
-    <a href="index.html" class="back-link"><span>←</span>Back to main hub</a>
-    <nav>
-      <a href="precise-movers.html">Precise Movers</a>
-      <a href="happy-to-help.html">Happy to Help</a>
-      <button class="btn" onclick="window.location.href='index.html#crisis-card'">Request crisis help</button>
-    </nav>
-  </div>
+  <img src="photos/leona-logo.jpg" alt="Leona Foundation Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="leona-foundation.html">Leona Foundation</a>
+    <a href="precise-movers.html">Precise Movers</a>
+    <a href="h2h-property-preservation.html">H2H Property Preservation</a>
+  </nav>
 </header>
 
 <main>
-  <div class="big-logo-container">
-  <img src="photos/leona-logo.jpg" alt="Leona Foundation Logo" class="big-logo">
-</div>
-
   <div class="container">
-    <span class="tag">Nonprofit-led platform</span>
+
+    <span class="tag">Nonprofit Crisis Support</span>
     <h1>Leona Foundation</h1>
+
     <p>
-      Leona Foundation exists to keep families housed by providing free emergency moving assistance, furniture donations,
-      and cleanouts for those facing housing instability. We connect community resources and partner companies to make
-      sure families aren’t left without support when it matters most.
+      The Leona Foundation exists to make sure families facing crisis are never left alone.  
+      We provide <strong>free emergency moving services</strong>, <strong>donated furniture and essentials</strong>,  
+      and <strong>temporary housing support</strong> for those experiencing eviction, unsafe living conditions,  
+      or sudden hardship.
     </p>
 
     <div class="stack">
+
+      <!-- LEFT COLUMN -->
       <section>
-        <h2>What we provide</h2>
+        <h2>What We Provide</h2>
         <ul>
-          <li>Free emergency moves for families facing eviction, domestic violence, or unsafe living conditions.</li>
-          <li>Furniture and essential household items to help families rebuild safe, stable homes.</li>
-          <li>Cleanouts and junk removal in crisis situations where a safe reset is needed.</li>
+          <li>Free emergency moves for families in eviction, domestic violence, or unsafe environments.</li>
+          <li>Furniture donations and essentials to help rebuild safe homes after crisis.</li>
+          <li>Cleanouts and reset assistance for households overwhelmed by sudden hardship.</li>
           <li>Warm, judgment-free support focused on dignity and stability.</li>
         </ul>
 
-        <h2>How the partnership works</h2>
+        <h2>How Our Partnership Model Works</h2>
         <p>
-          The Foundation works hand-in-hand with Precise Movers LLC and Happy to Help LLC. When community members or
-          businesses book paid moves, junk removal, or property preservation services, a portion of that work supports
-          free crisis moves and household essentials for families who cannot afford them.
+          The Leona Foundation partners with <strong>Precise Movers</strong> and  
+          <strong>H2H Property Preservation & Junk Removal</strong>.  
+        </p>
+        <p style="margin-top:0.5rem;">
+          When the community books paid moving, cleanout, or property preservation services,  
+          a portion of that revenue helps fund free crisis moves and essential support for families  
+          who cannot afford them.
         </p>
       </section>
 
+      <!-- RIGHT SIDEBAR -->
       <aside class="highlight-box">
-        <h3 style="margin-top:0;">Quick links</h3>
-        <ul style="list-style:none; padding-left:0; margin-top:0.4rem;">
-          <li style="margin-bottom:0.35rem;">
-            <a href="index.html#crisis-card" style="color:var(--teal); font-weight:500;">Request crisis moving help →</a>
+        <h3>Quick Links</h3>
+        <ul style="list-style:none; padding-left:0;">
+          <li style="margin-bottom:0.4rem;">
+            <a href="index.html#crisis" style="color:var(--teal); font-weight:600;">Request Crisis Help →</a>
           </li>
-          <li style="margin-bottom:0.35rem;">
-            <a href="index.html#actions" style="color:var(--teal); font-weight:500;">Book a paid move or cleanout →</a>
+          <li style="margin-bottom:0.4rem;">
+            <a href="precise-movers.html" style="color:var(--teal); font-weight:600;">Book a Paid Move →</a>
+          </li>
+          <li style="margin-bottom:0.4rem;">
+            <a href="h2h-property-preservation.html" style="color:var(--teal); font-weight:600;">Request Cleanout Services →</a>
           </li>
         </ul>
 
         <h3 style="margin-top:1rem;">Contact</h3>
-        <p style="font-size:0.9rem; margin-top:0.3rem;">
-          Phone/Text: <a href="tel:17574058522">(757) 405-8522</a><br>
-          Email: <a href="mailto:info@example.org">info@example.org</a>
+        <p style="margin-top:0.3rem;">
+          Phone/Text: <a href="tel:17574058522" style="color:var(--teal);">(757) 405-8522</a><br>
+          Email: <a href="mailto:info@example.org" style="color:var(--teal);">info@example.org</a>
         </p>
-        <p class="muted" style="margin-top:0.6rem;">
-          If you are in immediate danger, contact emergency services first. Use our form for relocation and support
-          once you are safe enough to do so.
+
+        <p style="font-size:0.85rem; color:var(--gray); margin-top:0.8rem;">
+          If you are in immediate danger, call emergency services first.  
+          Once safe, our team can support relocation and stabilization.
         </p>
       </aside>
+
     </div>
   </div>
 </main>
+
+<footer>
+  © <script>document.write(new Date().getFullYear());</script> Leona Foundation — All Rights Reserved.
+</footer>
+
 </body>
 </html>
