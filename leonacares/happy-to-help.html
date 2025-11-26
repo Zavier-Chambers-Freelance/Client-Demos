@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy to Help LLC | Junk Removal & Property Preservation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal:#0C6E6F;
+      --bg:#F5F2EA;
+      --border:#DFD7C7;
+      --gray:#8A8A8A;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:"Inter",system-ui,sans-serif;
+      background:var(--bg);
+      color:#1E2A2B;
+      line-height:1.6;
+    }
+    a { color:inherit; text-decoration:none; }
+    .container { max-width:900px; margin:0 auto; padding:0 1.5rem; }
+    header {
+      border-bottom:1px solid rgba(12,110,111,0.1);
+      background:#FBF8F2;
+    }
+    .header-row {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0.9rem 0; gap:1rem;
+    }
+    .back-link { font-size:0.86rem; color:#3B4A4B; }
+    nav a { font-size:0.85rem; margin-left:0.9rem; color:#4A5A5B; }
+    .btn {
+      border-radius:999px;
+      border:1px solid var(--teal);
+      padding:0.4rem 1.1rem;
+      font-size:0.83rem;
+      background:var(--teal);
+      color:#fff;
+      cursor:pointer;
+    }
+    main { padding:2.2rem 0 2.6rem; }
+    h1 { font-size:1.9rem; margin-bottom:0.4rem; }
+    h2 { font-size:1.25rem; margin:1.5rem 0 0.5rem; }
+    p { font-size:0.94rem; color:#455456; }
+    .tag {
+      display:inline-block;
+      font-size:0.75rem;
+      padding:0.18rem 0.6rem;
+      border-radius:999px;
+      background:#E8DCC2;
+      color:#5C4B31;
+      margin-bottom:0.9rem;
+    }
+    ul { padding-left:1.1rem; margin-top:0.3rem; color:#455456; font-size:0.92rem; }
+    li { margin-bottom:0.3rem; }
+    .card {
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#FFFFFF;
+      padding:1rem 1.1rem;
+      margin-top:1.2rem;
+      font-size:0.9rem;
+    }
+    .field-row {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:0.65rem;
+    }
+    @media (max-width:720px) {
+      .field-row { grid-template-columns:minmax(0,1fr); }
+    }
+    label {
+      display:block;
+      font-size:0.8rem;
+      color:#455456;
+      margin-bottom:0.2rem;
+    }
+    input, textarea {
+      width:100%;
+      border-radius:9px;
+      border:1px solid rgba(12,110,111,0.2);
+      padding:0.5rem 0.55rem;
+      font-size:0.84rem;
+      font-family:inherit;
+      background:#FCFAF6;
+      outline:none;
+    }
+    input:focus, textarea:focus {
+      border-color:var(--teal);
+      background:#FFFFFF;
+    }
+    textarea {
+      min-height:80px;
+      resize:vertical;
+    }
+    .big-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* CENTER the logo */
+  margin: 1.5rem 0 2rem;     /* spacing above & below */
+}
+
+.big-logo {
+  width: 260px;              /* adjust size here */
+  height: auto;
+  object-fit: contain;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="container header-row">
+    <a href="index.html" class="back-link">← Back to main hub</a>
+    <nav>
+      <a href="leona-foundation.html">Leona Foundation</a>
+      <a href="precise-movers.html">Precise Movers</a>
+      <button class="btn" onclick="window.location.href='index.html#actions'">Request services</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="big-logo-container">
+  <img src="photos/happy-2-help-services.jpg" alt="Leona Foundation Logo" class="big-logo">
+</div>
+
+  <div class="container">
+    <span class="tag">Happy to Help LLC</span>
+    <h1>Junk removal & property care that give back</h1>
+    <p>
+      Happy to Help LLC provides junk removal, property cleanouts, and preservation services for homeowners, investors,
+      and property managers. Each job helps fund the Leona Foundation’s crisis work for families who need free support.
+    </p>
+
+    <h2>Services</h2>
+    <ul>
+      <li>Junk removal and curbside pickups.</li>
+      <li>Whole-house trashouts and cleanouts.</li>
+      <li>Eviction and turnover cleanouts.</li>
+      <li>Basic lawn care and exterior cleanup.</li>
+      <li>Property preservation tasks for owners and asset managers.</li>
+    </ul>
+
+    <h2>Request a quote</h2>
+    <div class="card">
+      <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
+        <input type="hidden" name="_subject" value="Happy to Help - Services Request">
+        <input type="hidden" name="Form Type" value="Happy to Help Page">
+
+        <div class="field-row">
+          <div>
+            <label for="hth-name">Name / Company</label>
+            <input id="hth-name" type="text" name="Name or Company" required>
+          </div>
+          <div>
+            <label for="hth-phone">Phone</label>
+            <input id="hth-phone" type="tel" name="Phone" required>
+          </div>
+        </div>
+
+        <div style="margin-top:0.7rem;">
+          <label for="hth-location">Property city/ZIP</label>
+          <input id="hth-location" type="text" name="Property Location">
+        </div>
+
+        <div style="margin-top:0.7rem;">
+          <label for="hth-needs">What do you need help with?</label>
+          <textarea id="hth-needs" name="Services Needed" placeholder="Example: garage cleanout, eviction trashout, lawn care, securing property, board-up, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="margin-top:0.9rem;">Submit request</button>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>
