@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cyria Natural Hair & Braids | Book Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Licensed natural hair braider in Homestead, PA. Braids, weaves, extensions, wigs, dreads, locz and more. Book online with SimplyBook." />
+
+  <!-- Google Fonts (free) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-body: #070718;
+      --bg-card: #111322;
+      --bg-section: #090a16;
+      --color-primary: #a855f7; /* purple */
+      --color-secondary: #38bdf8; /* blue */
+      --color-accent: #ec4899; /* pink */
+      --color-text-main: #f9fafb;
+      --color-text-soft: #9ca3af;
+      --radius-xl: 18px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --border-subtle: 1px solid rgba(148, 163, 184, 0.18);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.16), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.14), transparent 60%),
+                  var(--bg-body);
+      color: var(--color-text-main);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px 20px 48px;
+    }
+
+    /* Accent orbs */
+    .orb {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(40px);
+      opacity: 0.5;
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: -1;
+      animation: float 24s ease-in-out infinite;
+    }
+
+    .orb--purple {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.7), transparent 65%);
+      top: -80px;
+      right: -40px;
+      animation-delay: 0s;
+    }
+
+    .orb--pink {
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.7), transparent 65%);
+      bottom: -60px;
+      left: -20px;
+      animation-delay: 6s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(20px, -10px, 0) scale(1.05); }
+    }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(7, 7, 24, 0.96), rgba(7, 7, 24, 0.7), transparent);
+      margin-bottom: 28px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 20px 6px;
+    }
+
+    .nav__brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav__logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: conic-gradient(from 170deg, var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #020617;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: spin-soft 18s linear infinite;
+    }
+
+    @keyframes spin-soft {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .nav__title {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .nav__link {
+      position: relative;
+      padding-bottom: 2px;
+      color: var(--color-text-soft);
+      transition: color 0.25s ease;
+    }
+
+    .nav__link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+
+    .nav__link:hover {
+      color: var(--color-text-main);
+    }
+
+    .nav__link:hover::after {
+      width: 100%;
+    }
+
+    .nav__cta {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border: none;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 8px 28px rgba(236, 72, 153, 0.35);
+      transform: translateY(0) scale(1);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .nav__cta span {
+      font-size: 16px;
+    }
+
+    .nav__cta:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 14px 36px rgba(236, 72, 153, 0.45);
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+      gap: 26px;
+      align-items: center;
+      padding: 28px 20px 18px;
+      border-radius: 26px;
+      background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.35), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.35), transparent 60%),
+                  linear-gradient(135deg, #020617, #020617, #020617);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 10% 90%, rgba(56, 189, 248, 0.25), transparent 55%),
+                        radial-gradient(circle at 100% 0, rgba(168, 85, 247, 0.35), transparent 60%);
+      opacity: 0.55;
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero__content {
+      animation: fadeUp 0.7s ease-out;
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(16px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      margin-bottom: 14px;
+      color: var(--color-text-soft);
+    }
+
+    .hero__eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #4ade80, #22c55e);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.75);
+    }
+
+    .hero__title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(32px, 5vw, 42px);
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .hero__title span {
+      background: linear-gradient(120deg, var(--color-primary), var(--color-accent), var(--color-secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero__subtitle {
+      font-size: 14px;
+      color: var(--color-text-soft);
+      max-width: 480px;
+      margin-bottom: 18px;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      background: radial-gradient(circle at top left, var(--color-secondary), var(--color-accent));
+      color: #020617;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      box-shadow: 0 14px 36px rgba(56, 189, 248, 0.4);
+      transform: translateY(0) scale(1);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(56, 189, 248, 0.55);
+    }
+
+    .btn-secondary {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--color-text-main);
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-primary);
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    .hero__meta-pill {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    /* Hero visual */
+    .hero__visual {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      min-height: 220px;
+    }
+
+    .hero__card {
+      flex: 1;
+      max-width: 280px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      box-shadow: var(--shadow-soft);
+      padding: 14px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform-origin: center;
+      transform: translateY(0) rotate(-1deg);
+      transition: transform 0.2s ease;
+    }
+
+    .hero__visual:hover .hero__card {
+      transform: translateY(-4px) rotate(0deg) scale(1.02);
+    }
+
+    .hero__card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .hero__avatar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero__avatar-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #020617;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .hero__avatar-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__avatar-name {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .hero__avatar-role {
+      font-size: 10px;
+      color: var(--color-text-soft);
+    }
+
+    .hero__badge {
+      font-size: 10px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero__badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #22c55e, #16a34a);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.85);
+    }
+
+    .hero__card-body {
+      margin-bottom: 10px;
+    }
+
+    .hero__card-title {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .hero__slots {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .slot-pill {
+      border-radius: 999px;
+      padding: 5px 6px;
+      font-size: 10px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      text-align: center;
+    }
+
+    .slot-pill--active {
+      background: linear-gradient(130deg, var(--color-primary), var(--color-accent));
+      border: none;
+      color: #020617;
+      font-weight: 500;
+    }
+
+    .hero__card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--color-text-soft);
+    }
+
+    .hero__mini-gallery {
+      position: absolute;
+      right: -4px;
+      bottom: -8px;
+      width: 116px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9));
+      transform-origin: bottom right;
+      transform: rotate(6deg);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+      animation: pop-in 0.6s ease-out 0.4s both;
+    }
+
+    @keyframes pop-in {
+      0% { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.9) rotate(10deg); }
+      100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(6deg); }
+    }
+
+    .hero__mini-gallery-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero__mini-gallery-cell {
+      aspect-ratio: 1 / 1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero__mini-gallery-cell:nth-child(1) {
+      background-image: linear-gradient(135deg, #f97316, #a855f7);
+    }
+
+    .hero__mini-gallery-cell:nth-child(2) {
+      background-image: linear-gradient(135deg, #38bdf8, #a855f7);
+    }
+
+    .hero__mini-gallery-cell:nth-child(3) {
+      background-image: linear-gradient(135deg, #ec4899, #22c55e);
+    }
+
+    .hero__mini-gallery-cell:nth-child(4) {
+      background-image: linear-gradient(135deg, #0ea5e9, #6366f1);
+    }
+
+    .hero__mini-gallery-cell:nth-child(5) {
+      background-image: linear-gradient(135deg, #facc15, #ec4899);
+    }
+
+    .hero__mini-gallery-cell:nth-child(6) {
+      background-image: linear-gradient(135deg, #a855f7, #22c55e);
+    }
+
+    .hero__mini-gallery-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 6px 8px;
+      text-align: center;
+      color: var(--color-text-soft);
+    }
+
+    /* Sections */
+    section {
+      margin-top: 38px;
+    }
+
+    .section__header {
+      margin-bottom: 18px;
+    }
+
+    .section__eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--color-text-soft);
+      margin-bottom: 4px;
+    }
+
+    .section__title {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+    }
+
+    .section__subtitle {
+      font-size: 13px;
+      color: var(--color-text-soft);
+      max-width: 540px;
+      margin-top: 4px;
+    }
+
+    /* Booking section */
+    .booking {
+      background: var(--bg-section);
+      border-radius: var(--radius-xl);
+      border: var(--border-subtle);
+      padding: 18px 14px 16px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.75);
+    }
+
+    .booking__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .booking__header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .booking__title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .booking__subtitle {
+      font-size: 12px;
+      color: var(--color-text-soft);
+    }
+
+    .booking__tag {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.95);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .booking__tag-pill {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--color-accent), var(--color-primary));
+      box-shadow: 0 0 10px rgba(236, 72, 153, 0.9);
+    }
+
+    .booking__widget {
+      margin-top: 8px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: #fff8f6;
+    }
+
+    .booking__widget-inner {
+      min-height: 520px;
+    }
+
+    /* Services */
+    .services {
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 65%),
+                  var(--bg-section);
+      border-radius: var(--radius-xl);
+      border: var(--border-subtle);
+      padding: 16px 14px 14px;
+    }
+
+    .services__top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: var(--color-text-soft);
+    }
+
+    .services__location {
+      font-size: 12px;
+    }
+
+    .services__location strong {
+      color: #e5e7eb;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .services__grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .services__item {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .services__item-title {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .services__item-tag {
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    /* Gallery */
+    .gallery {
+      background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 60%),
+                  var(--bg-section);
+      border-radius: var(--radius-xl);
+      border: var(--border-subtle);
+      padding: 16px 14px 14px;
+    }
+
+    .gallery__grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .gallery__item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      cursor: pointer;
+      transform: translateY(0) scale(1);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .gallery__item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.85));
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .gallery__item:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+      border-color: rgba(248, 250, 252, 0.9);
+    }
+
+    .gallery__item:hover::before {
+      opacity: 1;
+    }
+
+    .gallery__image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      filter: saturate(1.2);
+      transform: scale(1.02);
+      transition: transform 0.25s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery__item:hover .gallery__image {
+      transform: scale(1.08);
+    }
+
+    .gallery__label {
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gallery__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--color-primary), var(--color-accent));
+    }
+
+    /* Gradient placeholders for remaining items */
+    .gallery__item--2 .gallery__image {
+      background-image: linear-gradient(130deg, #38bdf8, #6366f1, #a855f7);
+    }
+    .gallery__item--3 .gallery__image {
+      background-image: linear-gradient(130deg, #ec4899, #facc15, #fb923c);
+    }
+    .gallery__item--4 .gallery__image {
+      background-image: linear-gradient(140deg, #6366f1, #a855f7, #22c55e);
+    }
+    .gallery__item--5 .gallery__image {
+      background-image: linear-gradient(130deg, #a855f7, #ec4899, #f97316);
+    }
+    .gallery__item--6 .gallery__image {
+      background-image: linear-gradient(140deg, #38bdf8, #22c55e, #facc15);
+    }
+
+    /* FAQ (drop-down) */
+    .faq {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 18px;
+      background: var(--bg-section);
+      border-radius: var(--radius-xl);
+      border: var(--border-subtle);
+      padding: 16px 14px 14px;
+    }
+
+    .faq__info {
+      font-size: 13px;
+      color: var(--color-text-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq__highlight {
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(248, 113, 113, 0.6);
+      background: rgba(153, 27, 27, 0.4);
+      color: #fee2e2;
+    }
+
+    .faq__highlight strong {
+      color: #fecaca;
+    }
+
+    .faq__contact {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .faq__contact-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 10px;
+      color: var(--color-text-soft);
+    }
+
+    .faq__contact-value {
+      font-size: 13px;
+    }
+
+    .faq__contact-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      color: var(--color-text-soft);
+    }
+
+    .faq__contact-tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--color-secondary), var(--color-accent));
+    }
+
+    .accordion {
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      overflow: hidden;
+    }
+
+    .accordion__item + .accordion__item {
+      border-top: 1px solid rgba(55, 65, 81, 0.75);
+    }
+
+    .accordion__button {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: inherit;
+      text-align: left;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .accordion__label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .accordion__bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--color-primary);
+    }
+
+    .accordion__icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .accordion__item--open .accordion__icon {
+      transform: rotate(90deg);
+      border-color: var(--color-primary);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .accordion__content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 10px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+      transition: max-height 0.22s ease, padding-bottom 0.22s ease;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .accordion__item--open .accordion__content {
+      max-height: 260px;
+      padding-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 32px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(30, 41, 59, 0.9);
+      padding-top: 12px;
+    }
+
+    .footer__brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .footer__brand span {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer__pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero__visual {
+        order: -1;
+      }
+      .faq {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .services__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        padding-inline: 14px;
+      }
+      .nav__links {
+        display: none;
+      }
+      .hero {
+        padding: 20px 16px 16px;
+      }
+      .booking,
+      .gallery,
+      .faq,
+      .services {
+        padding-inline: 12px;
+      }
+      .gallery__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding-inline: 14px;
+      }
+      .hero__mini-gallery {
+        display: none;
+      }
+      .booking__widget-inner {
+        min-height: 480px;
+      }
+      .gallery__image {
+        height: 130px;
+      }
+      .services__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- accent lights -->
+  <div class="orb orb--purple"></div>
+  <div class="orb orb--pink"></div>
+
+  <header>
+    <nav class="nav">
+      <a href="#top" class="nav__brand">
+        <div class="nav__logo">C</div>
+        <div class="nav__title">Stylez By Z & Z LLC</div>
+      </a>
+      <div class="nav__links">
+        <a href="#booking" class="nav__link">Bookings</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#gallery" class="nav__link">Gallery</a>
+        <a href="#info" class="nav__link">Info</a>
+        <button class="nav__cta" onclick="document.querySelector('#booking').scrollIntoView({ behavior: 'smooth' })">
+          Book now
+          <span>↗</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <div class="hero__eyebrow-dot"></div>
+          Licensed Natural Hair Braider • Homestead, PA
+        </div>
+
+        <h1 class="hero__title">
+          Luxury braids, locz & natural styles with
+          <span>online booking</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          I am a Licensed Natural Hair Braider specializing in natural hair, braids, weaves, extensions, wigs and dreads.
+          Book online, arrive picture ready, and let your hair do the talking.
+        </p>
+
+        <div class="hero__actions">
+          <button class="btn-primary" onclick="document.querySelector('#booking').scrollIntoView({ behavior: 'smooth' })">
+            Book an appointment
+            <span>✦</span>
+          </button>
+          <button class="btn-secondary" onclick="document.querySelector('#info').scrollIntoView({ behavior: 'smooth' })">
+            Read booking rules
+            <span>⟶</span>
+          </button>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__meta-pill">810 Amity St, Homestead PA 15120</div>
+          <div class="hero__meta-pill">Braids • Locz • Weaves • Extensions • Wigs • Dreads</div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__card">
+          <div class="hero__card-header">
+            <div class="hero__avatar">
+              <div class="hero__avatar-circle">C</div>
+              <div class="hero__avatar-text">
+                <div class="hero__avatar-name">Cyria</div>
+                <div class="hero__avatar-role">Licensed Natural Hair Braider</div>
+              </div>
+            </div>
+            <div class="hero__badge">
+              <span class="hero__badge-dot"></span>
+              Bookings live
+            </div>
+          </div>
+
+          <div class="hero__card-body">
+            <div class="hero__card-title">Signature services</div>
+            <div class="hero__slots">
+              <div class="slot-pill slot-pill--active">Knotless braids</div>
+              <div class="slot-pill">Locz & retwist</div>
+              <div class="slot-pill">Kids stylez</div>
+              <div class="slot-pill">Sew-ins</div>
+              <div class="slot-pill">Quick weaves</div>
+              <div class="slot-pill">Natural stylez</div>
+            </div>
+          </div>
+
+          <div class="hero__card-footer">
+            <span>Please come washed & blow dried.</span>
+            <span>★ ★ ★ ★ ★</span>
+          </div>
+        </div>
+
+        <div class="hero__mini-gallery">
+          <div class="hero__mini-gallery-row">
+            <div class="hero__mini-gallery-cell"></div>
+            <div class="hero__mini-gallery-cell"></div>
+            <div class="hero__mini-gallery-cell"></div>
+            <div class="hero__mini-gallery-cell"></div>
+            <div class="hero__mini-gallery-cell"></div>
+            <div class="hero__mini-gallery-cell"></div>
+          </div>
+          <div class="hero__mini-gallery-label">
+            Braids • Locz • Weaves
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING (SimplyBook) -->
+    <section id="booking">
+      <div class="section__header">
+        <div class="section__eyebrow">Book online</div>
+        <h2 class="section__title">Reserve your next appointment</h2>
+        <p class="section__subtitle">
+          Please read the booking rules below before you confirm your appointment. All deposits are
+          <strong>non-refundable</strong>. Remaining balances are paid in cash only at the appointment.
+        </p>
+      </div>
+
+      <div class="booking">
+        <div class="booking__header">
+          <div class="booking__header-text">
+            <div class="booking__title">Secure booking powered by SimplyBook</div>
+            <div class="booking__subtitle">
+              You do <strong>not</strong> need a PayPal account to check out — you can add a debit or credit card at the PayPal screen.
+            </div>
+          </div>
+          <div class="booking__tag">
+            <span class="booking__tag-pill"></span>
+            All deposits are non-refundable
+          </div>
+        </div>
+
+        <div class="booking__widget">
+          <div class="booking__widget-inner">
+            <!-- SimplyBook widget embed -->
+            <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              var widget = new SimplybookWidget({
+                "widget_type": "iframe",
+                "url": "https:\/\/testingdemosite.simplybook.me",
+                "theme": "simple_beauty_theme",
+                "theme_settings": {
+                  "sb_base_color": "#dd3649",
+                  "header_color": "#fff8f6",
+                  "timeline_hide_unavailable": "1",
+                  "hide_past_days": "0",
+                  "timeline_show_end_time": "0",
+                  "timeline_modern_display": "as_slots",
+                  "display_item_mode": "block",
+                  "body_bg_color": "#fff8f6",
+                  "sb_review_image": "",
+                  "dark_font_color": "#474747",
+                  "light_font_color": "#ffffff",
+                  "btn_color_1": "#dd3649",
+                  "sb_company_label_color": "#474747",
+                  "hide_img_mode": "0",
+                  "show_sidebar": "1",
+                  "sb_busy": "#c7b3b3",
+                  "sb_available": "#d6ebff"
+                },
+                "timeline": "modern",
+                "datepicker": "top_calendar",
+                "is_rtl": false,
+                "app_config": {
+                  "clear_session": 0,
+                  "allow_switch_to_ada": 0,
+                  "predefined": []
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section__header">
+        <div class="section__eyebrow">Services</div>
+        <h2 class="section__title">Braids, locz, weaves & more</h2>
+        <p class="section__subtitle">
+          All categories and individual styles are listed inside the booking system. Use the “Show All Appointments”
+          option there to view everything available.
+        </p>
+      </div>
+
+      <div class="services">
+        <div class="services__top">
+          <div>
+            <p>
+              I specialize in natural hair, braids, weaves, extensions, wigs and dreads. Choose the category that best
+              fits your look when booking.
+            </p>
+            <div class="pill-list">
+              <div class="pill">Natural hair focused</div>
+              <div class="pill">Protective styles</div>
+              <div class="pill">Kids & adults</div>
+            </div>
+          </div>
+          <div class="services__location">
+            <strong>Studio location</strong><br />
+            810 Amity St.<br />
+            Homestead, PA 15120
+          </div>
+        </div>
+
+        <div class="services__grid">
+          <div class="services__item">
+            <div class="services__item-title">Braids</div>
+            <div class="services__item-tag">Classic & custom braid styles.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Knotless</div>
+            <div class="services__item-tag">Lightweight, tension-friendly looks.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Locz & Dreads</div>
+            <div class="services__item-tag">Starter locz, maintenance & more.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Kids Braids & Stylez</div>
+            <div class="services__item-tag">Ages 6–10, kid-friendly styles.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Male Stylez</div>
+            <div class="services__item-tag">Ages 10+ braids & locz.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Natural Stylez</div>
+            <div class="services__item-tag">Twists, blowouts & more.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Quick Weave</div>
+            <div class="services__item-tag">Glued-in quick styles.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Sew-ins & Microlinks</div>
+            <div class="services__item-tag">Volume, length & installs.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Lashes</div>
+            <div class="services__item-tag">$10 strip lashes available.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Wedding group</div>
+            <div class="services__item-tag">Bridal & group bookings.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">Kids Locz / Dreads</div>
+            <div class="services__item-tag">Ages 6–10 locz & maintenance.</div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-title">More in system</div>
+            <div class="services__item-tag">Use “Show All Appointments” when booking.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="section__header">
+        <div class="section__eyebrow">Hair gallery</div>
+        <h2 class="section__title">Picture-ready styles</h2>
+        <p class="section__subtitle">
+          Please come picture ready — I love to capture my work. Here’s a preview; more photos will be added as new looks are created.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery__grid">
+          <!-- Replace with your own photos; first one uses your uploaded file name -->
+          <div class="gallery__item">
+            <img src="upload-532be96884216528922deaf6ac9973b1.jpeg" alt="Braided style by Cyria" class="gallery__image" />
+            <div class="gallery__label">
+              <span class="gallery__dot"></span>
+              Signature braids
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--2">
+            <div class="gallery__image"></div>
+            <div class="gallery__label">
+              <span class="gallery__dot"></span>
+              Natural & silk press
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--3">
+            <div class="gallery__image"></div>
+            <div class="gallery__label">
+              <span class="gallery__dot"></span>
+              Color & layers
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--4">
+            <div class="gallery__image"></div>
+            <div class="gallery__label">
+              <span class="gallery__dot"></span>
+              Locz & retwist
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--5">
+            <div class="gallery__image"></div>
+            <div class="gallery__label">
+              <span class="gallery__dot"></span>
+              Kids stylez
+            </div>
+          </div>
+          <div class="gallery__item gallery__item--6">
+            <div class="gallery__image"></div>
+            <div class="gallery__label">
+              <span class="gallery__dot"></span>
+              Sew-ins & quick weaves
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO / RULES / FAQ -->
+    <section id="info">
+      <div class="section__header">
+        <div class="section__eyebrow">Booking rules</div>
+        <h2 class="section__title">Please read before booking</h2>
+        <p class="section__subtitle">
+          These policies help keep every appointment running smooth. Booking means you agree to the rules below.
+          Items drop down so you can quickly tap through what matters most to you.
+        </p>
+      </div>
+
+      <div class="faq">
+        <div class="faq__info">
+          <div class="faq__highlight">
+            <strong>ALL DEPOSITS ARE NON-REFUNDABLE.</strong><br />
+            For services booked with a paid deposit, the remaining balance is due in <strong>cash only</strong> at your appointment.
+          </div>
+
+          <p>
+            Please come <strong>washed and blow dried out, ready to be braided.</strong> If you arrive not washed,
+            there will be a <strong>$30 fee</strong> added to your service.
+          </p>
+
+          <p>
+            Location:<br />
+            <strong>810 Amity St.<br />Homestead, PA 15120</strong>
+          </p>
+
+          <div class="faq__contact">
+            <div class="faq__contact-label">Contact</div>
+            <div class="faq__contact-value">Cyria – Licensed Natural Hair Braider</div>
+            <div class="faq__contact-value">Phone: <a href="tel:14125305009">412-530-5009</a></div>
+            <div class="faq__contact-value">Email: <a href="mailto:Cyriapace@mail.com">Cyriapace@mail.com</a></div>
+            <div class="faq__contact-tag">
+              <span class="faq__contact-tag-dot"></span>
+              Call or text for questions or address confirmation.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <!-- Payments & Deposits -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Payments, deposits & PayPal checkout
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • <strong>All deposits are non-refundable.</strong><br />
+                • For services booked with a deposit, the <strong>remaining unpaid balance</strong> is to be paid
+                <strong>in cash only</strong> at the appointment.<br /><br />
+                • You <strong>do NOT need a PayPal account</strong> to check out. Once you choose to pay the deposit or pay in full,
+                the site will redirect you to PayPal where you will see an option to <strong>add debit or credit card information</strong>.<br /><br />
+                • Please <strong>do not pre-pay in full</strong> if you are unsure you can keep your appointment. Do not send money ahead of time unless instructed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Boho & special deposit -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Boho styles & special deposits
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • Any style with <strong>human BOHO hair</strong> requires a <strong>$50 deposit</strong>.<br />
+                • This Boho deposit can be sent to <strong>$Crah13 (Cash App)</strong> with the note:
+                <strong>“deposit for boho”</strong>.<br />
+                • For Boho appointments, you must <strong>contact me at the phone number above</strong> to confirm the details.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hair prep & add-ons -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Hair prep, add-ons & color
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • Please come <strong>washed and blow dried out, ready to be braided.</strong><br />
+                • If you come <strong>not washed</strong>, there will be a <strong>$30 fee</strong> added to your service.<br />
+                • I take pictures of my work, so please come <strong>picture ready</strong>.<br />
+                • Lashes are available – I have <strong>strip lashes for $10</strong>.<br /><br />
+                • For any <strong>add-ons</strong> such as color, length, bohemian/BOHO look, or 30 inch hair,
+                  please use the <strong>“add on” option</strong> in the booking system and add it to your service.<br />
+                • Services that include color hair, <strong>30 inches or longer</strong>, Bohemian/Boho, or any
+                  <strong>loc extension</strong> service need to be booked <strong>2–3 days before</strong> your appointment day.
+              </p>
+            </div>
+          </div>
+
+          <!-- Locz & consultations -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Locz, reattachments & consultations
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • <strong>Sista Loc</strong> services require a <strong>consultation appointment</strong> before your service appointment.<br />
+                • If you need <strong>locz reattached</strong>, the fee is for <strong>each single loc</strong>.<br />
+                • If I am <strong>not</strong> the stylist who regularly maintains your locz and you need some fixed,
+                  you will need to schedule a <strong>full retwist service</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timing, late, reschedules -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Timing, late arrivals & rescheduling
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • There is a <strong>15 minute grace period</strong> from the time of your appointment.<br />
+                &nbsp;&nbsp;After that, the appointment will automatically cancel unless we discussed otherwise.<br /><br />
+                • I give <strong>one courtesy reschedule</strong> with your deposit, discussed with me <strong>only</strong>.<br />
+                • <strong>All reschedules</strong> need to be discussed with me before the reschedule is made in the system.<br /><br />
+                • Any service that is <strong>2 hours or longer</strong> needs to be scheduled before <strong>3–4pm</strong> unless we discuss otherwise.<br />
+                • <strong>If you are running late, you must communicate with me first.</strong> You cannot just tell me you will
+                  be late if it affects other appointments.<br /><br />
+                • Anyone booking a <strong>same-day or squeeze-in</strong> spot will have a <strong>$30 fee</strong> added.
+              </p>
+            </div>
+          </div>
+
+          <!-- Kids & guests -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Kids appointments & guests
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • <strong>All plats, locz, or twist styles</strong> need <strong>morning appointments only</strong>.<br />
+                • Any <strong>school-age child</strong> during weekdays will need a <strong>morning appointment</strong> if getting braids.<br />
+                • The only time I will take an <strong>afternoon weekday appointment</strong> for a child is if it’s a quick style:
+                  blow out, non-braid ponytail, natural style, or quick feed-in style.<br /><br />
+                • <strong>Only the person receiving the service should stay</strong>, other than a parent staying with a child.<br />
+                • Please <strong>do not bring extra guests</strong> to your appointment.<br />
+                • Any child receiving service is OK — but please do not bring other children who are not getting service.
+              </p>
+            </div>
+          </div>
+
+          <!-- Address & confirmations -->
+          <div class="accordion__item">
+            <button class="accordion__button" type="button">
+              <span class="accordion__label">
+                <span class="accordion__bullet"></span>
+                Address, confirmations & reminders
+              </span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__content">
+              <p>
+                • If you do not already have my address, it will be <strong>texted to the phone number</strong> attached to your appointment.<br />
+                • Make sure your phone number is correct when you book.<br />
+                • You can always text <strong>412-530-5009</strong> if you have questions about the address or your booking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer__brand">
+        <span>Stylez By Z & Z LLC</span>
+        <span>• Homestead, PA</span>
+      </div>
+      <div class="footer__social">
+        <div class="footer__pill">© <span id="year"></span> All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Dynamic year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple accordion (drop down answers)
+    document.querySelectorAll("[data-accordion] .accordion__item").forEach(function (item) {
+      var button = item.querySelector(".accordion__button");
+
+      button.addEventListener("click", function () {
+        var isOpen = item.classList.contains("accordion__item--open");
+        // Close others
+        document.querySelectorAll("[data-accordion] .accordion__item").forEach(function (other) {
+          if (other !== item) {
+            other.classList.remove("accordion__item--open");
+          }
+        });
+        // Toggle this one
+        if (!isOpen) {
+          item.classList.add("accordion__item--open");
+        } else {
+          item.classList.remove("accordion__item--open");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
