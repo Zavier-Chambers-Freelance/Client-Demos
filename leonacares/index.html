@@ -118,6 +118,45 @@
       font-weight:600;
     }
 
+    /* HERO WITH BACKGROUND IMAGE */
+.hero {
+  text-align:center;
+  padding:3.5rem 1.5rem 3.5rem;
+  color:white;
+  background-image:url('photos/new-moving-logo.jpg'); /* ← Replace with whatever photo we want */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+  border-radius:20px;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.45); /* darkens image so text is readable */
+  border-radius:20px;
+}
+
+/* Make the text appear ABOVE the overlay */
+.hero * {
+  position:relative;
+  z-index:2;
+}
+
+/* Mobile spacing fix */
+@media (max-width:600px){
+  .hero {
+    padding:2.5rem 1.4rem 2.5rem;
+  }
+}
+
+
     .divider {
       width:170px;
       height:6px;
@@ -341,20 +380,20 @@
 
 <main>
 
-  <!-- HERO / MOTTO -->
-  <section class="hero">
-    <div class="hero-subline">The Leona Foundation</div>
-    <h1 class="motto">Helping Families Move Forward</h1>
+<section class="hero">
+  <div class="hero-subline">The Leona Foundation</div>
+  <h1 class="motto">Helping Families Move Forward</h1>
 
-    <p>
-      The Leona Foundation exists for the moments when life changes without warning. We step in with
-      <strong>free move assistance</strong>, <strong>furniture donations</strong>, and <strong>housing support</strong>
-      for families facing eviction, foreclosure, or unstable living conditions.
-    </p>
-    <p>
-      When families must start over, we help them move forward with dignity, safety, and hope.
-    </p>
-  </section>
+  <p>
+    The Leona Foundation exists for the moments when life changes without warning. We step in with
+    <strong>free move assistance</strong>, <strong>furniture donations</strong>, and <strong>housing support</strong>
+    for families facing eviction, foreclosure, or unstable living conditions.
+  </p>
+  <p>
+    When families must start over, we help them move forward with dignity, safety, and hope.
+  </p>
+</section>
+
 
   <div class="divider"></div>
 
