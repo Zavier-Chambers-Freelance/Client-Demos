@@ -5,7 +5,8 @@
   <title>Precise Movers | Professional Moving Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Inter + Script font to match homepage -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -15,6 +16,7 @@
       --border:#DFD7C7;
       --gray:#8A8A8A;
       --radius:14px;
+      --script-font:"Dancing Script", cursive;
     }
 
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -36,7 +38,7 @@
     }
 
     header img {
-      width:260px; /* match larger logo styling */
+      width:260px;
       height:auto;
       margin-bottom:1rem;
     }
@@ -63,10 +65,15 @@
 
     main { padding:2.1rem 0 2.4rem; }
 
+    /* All headings use script font now */
+    h1, h2, h3 {
+      font-family:var(--script-font);
+      color:var(--teal-dark);
+    }
+
     h1 {
       font-size:2rem;
       margin-bottom:0.4rem;
-      color:var(--teal-dark);
       text-align:center;
     }
 
@@ -188,7 +195,7 @@
       for families facing eviction, unsafe housing, or sudden crisis.
     </p>
 
-    <h2 style="margin-top:1.4rem; color:var(--teal-dark);">Our Services</h2>
+    <h2 style="margin-top:1.4rem;">Our Services</h2>
     <ul>
       <li>Local residential moves (homes, apartments, townhomes).</li>
       <li>Small office and light commercial moves.</li>
@@ -196,7 +203,7 @@
       <li>Loading, unloading, rearranging, and basic labor assistance.</li>
     </ul>
 
-    <h2 style="margin-top:1.6rem; color:var(--teal-dark);">Request a Moving Quote</h2>
+    <h2 style="margin-top:1.6rem;">Request a Moving Quote</h2>
 
     <div class="request-box">
       <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
