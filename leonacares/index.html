@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
   <!-- PRIMARY META TAGS -->
-<!-- PRIMARY META TAGS -->
-<!-- OPEN GRAPH (Facebook, LinkedIn, etc.) -->
-<meta property="og:title" content="Leona Foundation | We Care, We Move, We Support">
-<meta property="og:description" content="Free crisis moves, furniture support, and housing assistance for families in need.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://zavierchambers.com/Client-Demos/leonacares/">
-<meta property="og:image" content="https://zavierchambers.com/Client-Demos/leonacares/photos/leona-logo.jpg">
+  <meta property="og:title" content="Leona Foundation | We Care, We Move, We Support">
+  <meta property="og:description" content="Free crisis moves, furniture support, and housing assistance for families in need.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zavierchambers.com/Client-Demos/leonacares/">
+  <meta property="og:image" content="https://zavierchambers.com/Client-Demos/leonacares/photos/leona-logo.jpg">
 
-<!-- TWITTER / X CARD -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Leona Foundation | We Care, We Move, We Support">
-<meta name="twitter:description" content="Free crisis moves, furniture support, and housing assistance for families in need.">
-<meta name="twitter:url" content="https://zavierchambers.com/Client-Demos/leonacares/">
-<meta name="twitter:image" content="https://zavierchambers.com/Client-Demos/leonacares/photos/leona-logo.jpg">
-
-
+  <!-- TWITTER / X CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leona Foundation | We Care, We Move, We Support">
+  <meta name="twitter:description" content="Free crisis moves, furniture support, and housing assistance for families in need.">
+  <meta name="twitter:url" content="https://zavierchambers.com/Client-Demos/leonacares/">
+  <meta name="twitter:image" content="https://zavierchambers.com/Client-Demos/leonacares/photos/leona-logo.jpg">
 
   <meta charset="UTF-8" />
   <title>LeonaCares.org | Leona Foundation — We Care, We Move, We Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- INTER + SCRIPT FONT FOR MOTTO / HEADERS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -34,6 +31,7 @@
       --border:#DFD7C7;
       --gray:#8A8A8A;
       --radius:14px;
+      --script-font:"Dancing Script", cursive;
     }
 
     * { box-sizing:border-box; margin:0; padding:0; }
@@ -49,15 +47,19 @@
 
     header {
       text-align:center;
-      padding:1.5rem 1rem 1rem;
+      padding:1.4rem 1rem 1rem;
       background:#FBF8F2;
       border-bottom:1px solid rgba(0,0,0,0.08);
     }
     header img {
-      width:160px;
+      width:260px;           /* “stretched” logo */
+      max-width:90vw;
       height:auto;
       object-fit:contain;
-      margin-bottom:1rem;
+      margin-bottom:0.8rem;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     nav {
@@ -66,6 +68,7 @@
       gap:1.4rem;
       font-size:0.92rem;
       flex-wrap:wrap;
+      font-weight:500;
     }
     nav a {
       padding-bottom:0.15rem;
@@ -83,25 +86,50 @@
 
     .hero {
       text-align:center;
-      padding:2.2rem 0 1.8rem;
+      padding:2rem 1.5rem 1.8rem;
     }
-    .hero h1 {
-      font-size:2rem;
-      margin-bottom:0.8rem;
+
+    .hero .motto {
+      font-family:var(--script-font);
+      font-size:2.35rem;
+      line-height:1.2;
+      font-weight:700;
       color:var(--teal-dark);
+      margin-bottom:0.3rem;
     }
+
+    @media (max-width:600px){
+      .hero .motto {
+        font-size:2rem;
+      }
+    }
+
+    .hero-subline {
+      font-size:0.9rem;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:#5a6b6c;
+      font-weight:600;
+      margin-bottom:0.8rem;
+    }
+
     .hero p {
       font-size:1rem;
-      max-width:720px;
-      margin:0.6rem auto;
+      max-width:780px;
+      margin:0.4rem auto;
       color:#4A5A5B;
     }
 
+    .hero p strong {
+      font-weight:600;
+    }
+
     .divider {
-      width:110px;
-      height:2px;
-      background:#D3C7B3;
-      margin:1.8rem auto;
+      width:170px;
+      height:6px;
+      background:var(--teal);
+      margin:1.9rem auto 1.6rem;
+      border-radius:999px;   /* “colored gap” band */
     }
 
     h2 {
@@ -128,6 +156,7 @@
       gap:1.1rem;
       margin-top:1rem;
     }
+
     .card {
       background:#fff;
       border-radius:var(--radius);
@@ -139,8 +168,6 @@
       color:var(--teal-dark);
       margin-bottom:0.4rem;
     }
-
-    .partner-strip { margin-top:1.2rem; }
 
     .btn {
       border-radius:999px;
@@ -157,6 +184,127 @@
       background:var(--teal-dark);
     }
 
+    .script-heading {
+      font-family:var(--script-font);
+      font-size:2rem;
+      font-weight:700;
+      color:var(--teal-dark);
+      text-align:center;
+      margin-bottom:0.4rem;
+    }
+
+    .section-subcopy {
+      text-align:center;
+      max-width:780px;
+      margin:0.4rem auto 0.8rem;
+      color:#4A5A5B;
+      font-size:0.98rem;
+    }
+
+    .section-divider {
+      width:80px;
+      height:3px;
+      background:#D3C7B3;
+      margin:0.6rem auto 0;
+      border-radius:999px;
+    }
+
+    /* HOW WE MAKE A DIFFERENCE LAYOUT */
+    .difference-wrap {
+      margin-top:1.6rem;
+    }
+
+    .service-row {
+      display:flex;
+      align-items:center;
+      gap:1.6rem;
+      margin-top:1.8rem;
+      flex-wrap:wrap;
+    }
+
+    .service-row.reverse {
+      flex-direction:row-reverse;
+    }
+
+    .service-image {
+      flex:1 1 260px;
+      min-width:260px;
+    }
+
+    .service-image img {
+      width:100%;
+      border-radius:var(--radius);
+      object-fit:cover;
+      display:block;
+      border:1px solid var(--border);
+    }
+
+    .service-content {
+      flex:1 1 260px;
+      min-width:260px;
+    }
+
+    .service-heading {
+      font-family:var(--script-font);
+      font-size:1.6rem;
+      font-weight:700;
+      color:var(--teal-dark);
+      display:inline-block;
+      padding-bottom:0.2rem;
+      border-bottom:3px solid var(--teal);
+      margin-bottom:0.4rem;
+    }
+
+    .service-content p {
+      font-size:0.96rem;
+      color:#4A5A5B;
+      margin-top:0.2rem;
+    }
+
+    @media (max-width:768px) {
+      .service-row,
+      .service-row.reverse {
+        flex-direction:column;
+      }
+    }
+
+    /* COMMUNITY SERVICE PARTNERS */
+    .partner-strip { margin-top:1.2rem; }
+
+    .partner-card {
+      display:flex;
+      flex-direction:column;
+      gap:0.8rem;
+    }
+
+    .partner-main {
+      display:flex;
+      align-items:flex-start;
+      gap:0.8rem;
+    }
+
+    .partner-logo {
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid var(--border);
+      background:#fff;
+      flex-shrink:0;
+    }
+
+    .partner-main h3 {
+      font-size:1.02rem;
+      margin-bottom:0.25rem;
+    }
+
+    .partner-main p {
+      font-size:0.94rem;
+      color:#4A5A5B;
+      margin-bottom:0.25rem;
+    }
+
+    /* FOOTER */
     footer {
       padding:1.6rem 0 2.1rem;
       text-align:center;
@@ -171,70 +319,140 @@
 <body>
 
 <header>
+  <!-- Logo stretched across the top -->
   <img src="photos/leona-logo.jpg" alt="Leona Foundation Logo">
   <nav>
     <a href="index.html">Home</a>
     <a href="leona-foundation.html">Leona Foundation</a>
     <a href="precise-movers.html">Precise Movers</a>
-    <a href="h2h-property-preservation.html">H2H Property Preservation</a>
+    <a href="h2h-property-preservation.html">Property Preservation & Junk Removal</a>
     <a href="#partner">Become a Partner</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- HERO -->
+  <!-- HERO / MOTTO -->
   <section class="hero">
-    <h1>Welcome to the Leona Foundation — We Care, We Move, We Support.</h1>
+    <div class="hero-subline">The Leona Foundation</div>
+    <h1 class="motto">Helping Families Move Forward</h1>
+
     <p>
-      At Leona Cares, we believe no family should face crisis alone. Our mission is to provide <strong>free emergency move assistance</strong>, <strong>furniture donations</strong>, and <strong>temporary housing support</strong> to families experiencing eviction, foreclosure, unsafe living conditions, or sudden hardship.
+      The Leona Foundation exists for the moments when life changes without warning. We step in with
+      <strong>free move assistance</strong>, <strong>furniture donations</strong>, and <strong>housing support</strong>
+      for families facing eviction, foreclosure, or unstable living conditions.
     </p>
     <p>
-      We step in when families need us most — helping them relocate, stabilize, and rebuild with dignity, safety, and compassion.
+      When families must start over, we help them move forward with dignity, safety, and hope.
     </p>
   </section>
 
   <div class="divider"></div>
 
-  <!-- WHAT WE DO -->
-  <section class="container section">
-    <h2>💙 What We Do</h2>
+  <!-- HOW WE MAKE A DIFFERENCE -->
+  <section class="container section" id="difference">
+    <h2 class="script-heading">How We Make A Difference</h2>
+    <p class="section-subcopy">
+      Through emergency move assistance, home essentials, and transitional housing support, we walk alongside families
+      during some of the hardest transitions of their lives.
+    </p>
+    <div class="section-divider"></div>
 
-    <h3 style="margin-top:1rem;">✔ Emergency Crisis Moves (Free)</h3>
-    <p>We provide urgent relocation assistance for families facing:</p>
-    <ul>
-      <li>Eviction or foreclosure</li>
-      <li>Unsafe or unstable homes</li>
-      <li>Loss of income</li>
-      <li>Domestic or family-related crises</li>
-    </ul>
+    <div class="difference-wrap">
+      <!-- 1. Emergency Move Assistance -->
+      <div class="service-row">
+        <div class="service-image">
+          <!-- replace with real image from client -->
+          <img src="photos/percise-movers-logo.jpg" alt="Emergency move assistance for families in crisis">
+        </div>
+        <div class="service-content">
+          <div class="service-heading">Emergency Move Assistance</div>
+          <p>Urgent relocation support when families must move quickly due to crisis.</p>
+          <ul>
+            <li>Eviction or foreclosure moves</li>
+            <li>Support during unsafe or unstable living conditions</li>
+            <li>Help after sudden loss of income or crisis events</li>
+          </ul>
+        </div>
+      </div>
 
-    <h3 style="margin-top:1.3rem;">✔ Donated Furniture & Home Essentials</h3>
-    <p>We collect and redistribute gently-used furniture and essentials to help families rebuild their homes after crisis.</p>
+      <!-- 2. Home Essentials Program -->
+      <div class="service-row reverse">
+        <div class="service-image">
+          <!-- replace with real image from client -->
+          <img src="photos/happy-2-help-services.jpg" alt="Home essentials and furnishings for families starting over">
+        </div>
+        <div class="service-content">
+          <div class="service-heading">Home Essentials Program</div>
+          <p>Basic items that help turn empty spaces into safe, comfortable homes.</p>
+          <ul>
+            <li>Furnishings for families starting over</li>
+            <li>Basic household essentials provided</li>
+            <li>Helps turn empty spaces into homes</li>
+          </ul>
+        </div>
+      </div>
 
-    <h3 style="margin-top:1.3rem;">✔ Temporary Housing Support</h3>
-    <p>We work to ensure families have safe, short-term living options during emergency transitions.</p>
+      <!-- 3. Transitional Housing Assistance -->
+      <div class="service-row">
+        <div class="service-image">
+          <!-- replace with real image from client -->
+          <img src="photos/leona-logo.jpg" alt="Transitional housing assistance for families in crisis">
+        </div>
+        <div class="service-content">
+          <div class="service-heading">Transitional Housing Assistance</div>
+          <p>Short-term housing options while families work toward stability.</p>
+          <ul>
+            <li>Short-term housing options for families in crisis</li>
+            <li>Support while working toward stable, permanent housing</li>
+            <li>Safe temporary placement during major life transitions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- PARTNERED SERVICES -->
+  <!-- COMMUNITY SERVICE PARTNERS -->
   <section class="container section">
-    <h2>🤝 Partnered Services (Affordable Options)</h2>
-
-    <p>To support our mission, we partner with two trusted local companies that provide affordable community services.</p>
+    <h2 class="script-heading">Community Service Partners</h2>
+    <p class="section-subcopy">
+      Our Community Service Partners help expand our support by working with local businesses and organizations
+      to provide additional resources for families in need. Together, we strengthen the assistance offered
+      during times of hardship.
+    </p>
 
     <div class="service-cards partner-strip">
-      <div class="card">
-        <h3>🚛 Precise Movers</h3>
-        <p>Professional, reliable moving services for local and long-distance relocations.</p>
-        <p><em>Free for qualifying hardship cases through our foundation.</em></p>
+      <!-- Precise Movers -->
+      <div class="card partner-card">
+        <div class="partner-main">
+          <!-- circular logo – replace src with actual logo image -->
+          <img src="photos/percise-movers-logo.jpg" alt="Precise Movers Logo" class="partner-logo">
+          <div>
+            <h3>Precise Movers</h3>
+            <p>
+              Professional, affordable moving services for local and long-distance relocations, with free assistance
+              available for qualifying hardship cases through the Leona Foundation.
+            </p>
+          </div>
+        </div>
         <a class="btn" href="precise-movers.html">View Moving Services</a>
       </div>
 
-      <div class="card">
-        <h3>🧹 H2H Property Preservation & Junk Removal</h3>
-        <p>Cleanouts, junk removal, and property preservation — with reusable items donated back to families in need.</p>
+      <!-- Property Preservation & Junk Removal -->
+      <div class="card partner-card">
+        <div class="partner-main">
+          <!-- circular logo – replace src with actual logo image -->
+          <img src="photos/happy-2-help-services.jpg" alt="Property Preservation & Junk Removal Logo" class="partner-logo">
+          <div>
+            <h3>Property Preservation & Junk Removal</h3>
+            <p>
+              Cleanouts, junk removal, and property preservation, with reusable items donated back to families in need
+              through the Leona Foundation.
+            </p>
+          </div>
+        </div>
         <a class="btn" href="h2h-property-preservation.html">View Property Services</a>
       </div>
     </div>
@@ -242,33 +460,48 @@
 
   <div class="divider"></div>
 
-  <!-- BECOME A PARTNER -->
+  <!-- BECOME A PARTNER (QUESTION STYLE) -->
   <section class="container section" id="partner">
-    <h2>🌟 Become a Partner</h2>
-    <p>
-      Support families in crisis by becoming a corporate partner or community member.  
+    <h2 class="script-heading">Want to Become a Community Service Partner?</h2>
+    <p class="section-subcopy">
+      Support families in crisis by becoming a corporate partner or community member.
       Your sponsorship helps us fund free emergency moves, furniture distribution, and housing assistance.
     </p>
 
-    <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST" style="margin-top:1rem; max-width:540px;">
+    <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST" style="margin-top:1rem; max-width:540px; margin-left:auto; margin-right:auto;">
       <input type="hidden" name="_subject" value="New Partnership Inquiry - Leona Foundation">
       <input type="hidden" name="_template" value="table">
 
       <label>Name</label>
-      <input type="text" name="Name" required style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
+      <input type="text" name="Name" required
+             style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
 
       <label>Email</label>
-      <input type="email" name="Email" required style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
+      <input type="email" name="Email" required
+             style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
 
-      <label>Organization (optional)</label>
-      <input type="text" name="Organization" style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
+      <label>Phone</label>
+      <input type="tel" name="Phone" required
+             placeholder="(555) 555-5555"
+             style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
+
+      <label>Business Name (optional)</label>
+      <input type="text" name="Business Name"
+             style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);">
+
+      <label>Mailing Address (optional)</label>
+      <textarea name="Mailing Address" rows="3"
+                placeholder="Street, City, State, ZIP"
+                style="width:100%; padding:0.55rem; margin-bottom:0.7rem; border-radius:9px; border:1px solid var(--border);"></textarea>
 
       <label>Message</label>
-      <textarea name="Message" rows="4" style="width:100%; padding:0.55rem; border-radius:9px; border:1px solid var(--border);"></textarea>
+      <textarea name="Message" rows="4"
+                style="width:100%; padding:0.55rem; border-radius:9px; border:1px solid var(--border);"></textarea>
 
       <button class="btn" type="submit" style="margin-top:1rem;">Submit Partnership Request</button>
     </form>
   </section>
+
 
 </main>
 
