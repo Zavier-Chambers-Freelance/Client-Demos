@@ -98,12 +98,6 @@
       margin-bottom:0.3rem;
     }
 
-    @media (max-width:600px){
-      .hero .motto {
-        font-size:2rem;
-      }
-    }
-
     .hero-subline {
       font-size:0.9rem;
       letter-spacing:0.12em;
@@ -312,6 +306,21 @@
       color:#4A5A5B;
       border-top:1px solid rgba(0,0,0,0.1);
       margin-top:2.6rem;
+    }
+
+    /* MOBILE: add margin so content isn't edge-to-edge */
+    @media (max-width:600px){
+      .hero .motto {
+        font-size:2rem;
+      }
+
+      header,
+      .hero,
+      .container,
+      footer {
+        padding-left:1.25rem;
+        padding-right:1.25rem;
+      }
     }
   </style>
 </head>
