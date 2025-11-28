@@ -45,12 +45,33 @@
 
     a { text-decoration:none; color:inherit; }
 
+    /* UPDATED HEADER WITH PHOTO BACKGROUND & WHITE TEXT */
     header {
       text-align:center;
       padding:1.4rem 1rem 1rem;
-      background:#FBF8F2;
-      border-bottom:1px solid rgba(0,0,0,0.08);
+      background-image:url('photos/top.jpg'); /* top half of the full image */
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      color:#FFFFFF;
+      position:relative;
+      /* removed border-bottom so header and hero touch */
+      /* border-bottom:1px solid rgba(0,0,0,0.08); */
     }
+
+    header::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.45); /* dark overlay for nav + logo readability */
+      z-index:1;
+    }
+
+    header * {
+      position:relative;
+      z-index:2;
+    }
+
     header img {
       width:260px;           /* “stretched” logo */
       max-width:90vw;
@@ -60,22 +81,26 @@
       display:block;
       margin-left:auto;
       margin-right:auto;
+      background:rgba(255,255,255,0.9); /* subtle pill background behind logo */
+      padding:0.4rem 1.1rem;
+      border-radius:999px;
     }
 
     nav {
       display:flex;
       justify-content:center;
       gap:1.4rem;
-      font-size:0.92rem;
+      font-size:1.2rem;
       flex-wrap:wrap;
       font-weight:500;
     }
     nav a {
       padding-bottom:0.15rem;
       border-bottom:2px solid transparent;
+      color:#FDFDFD;
     }
     nav a:hover {
-      border-bottom-color:var(--teal);
+      border-bottom-color:#FFFFFF;
     }
 
     .container {
@@ -85,17 +110,25 @@
     }
 
     .hero {
-      text: white !important;
+      color: white;
       text-align:center;
-      padding:2rem 1.5rem 1.8rem;
+      padding:3.5rem 1.5rem 3.5rem;
+      background-image:url('photos/bottom.jpg'); /* bottom half of the full image */
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      position:relative;
+      /* removed border radius & margin so it visually joins the header image */
+      border-radius:0;
+      margin-top:0;
     }
 
     .hero .motto {
       font-family:var(--script-font);
-      font-size:2.35rem;
+      font-size:3.35rem;
       line-height:1.2;
       font-weight:700;
-      color:var(--teal-dark);
+      color: white;
       margin-bottom:0.3rem;
     }
 
@@ -103,7 +136,7 @@
       font-size:0.9rem;
       letter-spacing:0.12em;
       text-transform:uppercase;
-      color:#5a6b6c;
+      color:white;
       font-weight:600;
       margin-bottom:0.8rem;
     }
@@ -119,51 +152,37 @@
       font-weight:600;
     }
 
-    /* HERO WITH BACKGROUND IMAGE */
-.hero {
-  text-align:center;
-  padding:3.5rem 1.5rem 3.5rem;
-  color:white;
-  background-image:url('photos/new-moving-logo.jpg'); /* ← Replace with whatever photo we want */
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  position:relative;
-  border-radius:20px;
-}
+    /* Dark overlay for hero readability */
+    .hero::before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(0,0,0,0.45);
+      /* match no radius so it butts cleanly to header */
+      border-radius:0;
+    }
 
-/* Dark overlay for readability */
-.hero::before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.45); /* darkens image so text is readable */
-  border-radius:20px;
-}
+    .hero * {
+      position:relative;
+      z-index:2;
+    }
 
-/* Make the text appear ABOVE the overlay */
-.hero * {
-  position:relative;
-  z-index:2;
-}
-
-/* Mobile spacing fix */
-@media (max-width:600px){
-  .hero {
-    padding:2.5rem 1.4rem 2.5rem;
-  }
-}
-
+    /* Mobile spacing fix */
+    @media (max-width:600px){
+      .hero {
+        padding:2.5rem 1.4rem 2.5rem;
+      }
+    }
 
     .divider {
       width:170px;
       height:6px;
       background:var(--teal);
       margin:1.9rem auto 1.6rem;
-      border-radius:999px;   /* “colored gap” band */
+      border-radius:999px;
     }
 
     h2 {
@@ -362,6 +381,13 @@
         padding-right:1.25rem;
       }
     }
+    /* GAP BETWEEN HEADER & HERO IMAGES */
+    .photo-gap {
+      height: 16px;                 /* adjust size if you want bigger/smaller */
+      background: var(--bg);        /* same background as the page */
+      width: 100%;
+    }
+
   </style>
 </head>
 
@@ -371,30 +397,30 @@
   <!-- Logo stretched across the top -->
   <img src="photos/leona-logo.jpg" alt="Leona Foundation Logo">
   <nav>
+    <!-- UPDATED NAV ORDER & LABELS -->
     <a href="index.html">Home</a>
     <a href="leona-foundation.html">Leona Foundation</a>
-    <a href="precise-movers.html">Precise Movers</a>
-    <a href="h2h-property-preservation.html">Property Preservation & Junk Removal</a>
-    <a href="#partner">Become a Partner</a>
+    <a href="#service-partners">Service Partners</a>
+    <a href="careers-volunteering.html">Careers &amp; Volunteering</a>
+    <a href="#partner">Contact Us</a>
   </nav>
 </header>
 
 <main>
+<div class="photo-gap"></div>
 
 <section class="hero">
-  <div class="hero-subline">The Leona Foundation</div>
   <h1 class="motto">Helping Families Move Forward</h1>
 
-  <p>
+  <p style="color: white; font-size: 1.2rem;">
     The Leona Foundation exists for the moments when life changes without warning. We step in with
     <strong>free move assistance</strong>, <strong>furniture donations</strong>, and <strong>housing support</strong>
     for families facing eviction, foreclosure, or unstable living conditions.
   </p>
-  <p>
+  <p style="color: white;">
     When families must start over, we help them move forward with dignity, safety, and hope.
   </p>
 </section>
-
 
   <div class="divider"></div>
 
@@ -464,7 +490,7 @@
   <div class="divider"></div>
 
   <!-- COMMUNITY SERVICE PARTNERS -->
-  <section class="container section">
+  <section class="container section" id="service-partners">
     <h2 class="script-heading">Community Service Partners</h2>
     <p class="section-subcopy">
       Our Community Service Partners help expand our support by working with local businesses and organizations
@@ -476,7 +502,7 @@
       <!-- Precise Movers -->
       <div class="card partner-card">
         <div class="partner-main">
-          <!-- circular logo – I Zavier Chambers replaced src with actual logo image -->
+          <!-- circular logo -->
           <img src="photos/percise-movers-logo.jpg" alt="Precise Movers Logo" class="partner-logo">
           <div>
             <h3>Precise Movers</h3>
@@ -492,7 +518,7 @@
       <!-- Property Preservation & Junk Removal -->
       <div class="card partner-card">
         <div class="partner-main">
-          <!-- circular logo – replace src with actual logo image -->
+          <!-- circular logo -->
           <img src="photos/happy-2-help-services.jpg" alt="Property Preservation & Junk Removal Logo" class="partner-logo">
           <div>
             <h3>Property Preservation & Junk Removal</h3>
@@ -509,9 +535,9 @@
 
   <div class="divider"></div>
 
-  <!-- BECOME A PARTNER (QUESTION STYLE) -->
+  <!-- BECOME A PARTNER / CONTACT FORM -->
   <section class="container section" id="partner">
-    <h2 class="script-heading">Want to Become a Community Service Partner?</h2>
+    <h2 class="script-heading">Ready to partner with us to support local families?</h2>
     <p class="section-subcopy">
       Support families in crisis by becoming a corporate partner or community member.
       Your sponsorship helps us fund free emergency moves, furniture distribution, and housing assistance.
@@ -550,7 +576,6 @@
       <button class="btn" type="submit" style="margin-top:1rem;">Submit Partnership Request</button>
     </form>
   </section>
-
 
 </main>
 
