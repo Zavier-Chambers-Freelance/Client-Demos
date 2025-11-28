@@ -387,6 +387,21 @@
       background: var(--bg);        /* same background as the page */
       width: 100%;
     }
+/* FORCE ALL 'How We Make A Difference' IMAGES TO THE SAME SIZE */
+.service-image {
+  width: 100%;
+  height: 320px;      /* adjust height here */
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* crop uniformly */
+  display: block;
+}
 
   </style>
 </head>
